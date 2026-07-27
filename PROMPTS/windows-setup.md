@@ -24,7 +24,7 @@ Before changing anything:
 3. State the facts found, assumptions, risks, and a small proposed plan.
 4. Do not invent a loader-specific command. Use only commands documented by the project or discoverable from an existing wrapper and its documentation.
 
-Then, only after the plan is clear:
+Then, stop and wait for my explicit approval. Only after I approve the plan:
 - Make the smallest useful setup or configuration change.
 - Avoid credentials, tokens, private IPs, .env contents, and machine-specific secrets.
 - Do not delete files, reset the branch, force-push, or overwrite local work.

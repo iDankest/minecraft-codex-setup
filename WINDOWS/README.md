@@ -68,20 +68,14 @@ Then follow the project's own README and the loader's official documentation. Us
 
 This repository can be downloaded or cloned. Cloning is recommended because it preserves branches and makes later synchronization explicit.
 
-Replace placeholders before running commands:
-
-~~~powershell
-Set-Location "$HOME\Documents\Code"
-git clone "<REPOSITORY_URL>" "<ONBOARDING_DIRECTORY>"
-Set-Location ".\<ONBOARDING_DIRECTORY>"
-git status --short --branch
-~~~
-
-If Documents\Code does not exist, create it first:
+Replace placeholders before running commands. Create the parent directory before changing into it:
 
 ~~~powershell
 New-Item -ItemType Directory -Force "$HOME\Documents\Code" | Out-Null
 Set-Location "$HOME\Documents\Code"
+git clone "<REPOSITORY_URL>" "<ONBOARDING_DIRECTORY>"
+Set-Location ".\<ONBOARDING_DIRECTORY>"
+git status --short --branch
 ~~~
 
 Clone the Minecraft project into its own directory, not inside the onboarding documentation directory:

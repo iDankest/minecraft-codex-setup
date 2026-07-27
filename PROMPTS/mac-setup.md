@@ -20,7 +20,7 @@ Before changing anything:
 3. State the facts you found, the assumptions you would need, and a small proposed plan.
 4. Do not guess a Minecraft loader, version, JDK, repository URL, or build command.
 
-Then, only after the plan is clear:
+Then, stop and wait for my explicit approval. Only after I approve the plan:
 - Make the smallest useful change for Mac-based editing or planning.
 - Do not add credentials, tokens, private IPs, .env contents, or machine-specific secrets.
 - Do not modify Windows-only build or runtime configuration unless the project requires a documented shared change.

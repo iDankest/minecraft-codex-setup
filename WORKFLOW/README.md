@@ -17,6 +17,7 @@ Both machines may run Codex locally, but the agents do not share context, locks,
 
 ~~~bash
 git status --short --branch
+git switch "<DEFAULT_BRANCH>"
 git pull --ff-only origin "<DEFAULT_BRANCH>"
 git switch --create "work/mac-plan-<topic>"
 ~~~
