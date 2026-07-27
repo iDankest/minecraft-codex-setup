@@ -6,7 +6,7 @@ The Windows desktop is the build, test, and Minecraft runtime machine. This guid
 
 1. Confirm [Windows edition: TBD] and the Minecraft project facts in [DECISIONS.md](../DECISIONS.md).
 2. Install and verify Git for Windows.
-3. Install and verify Codex locally.
+3. Install and verify OpenCode locally if Windows will also use an agent.
 4. Install the project-required JDK.
 5. Clone this repository and the Minecraft project into separate local folders.
 6. Inspect the project before running any build or Minecraft command.
@@ -26,15 +26,15 @@ git config --global user.email "<YOUR_EMAIL>"
 
 See the [Git documentation](https://git-scm.com/doc). Use the account's approved credential manager or SSH setup; never store tokens in this repository.
 
-### Codex
+### OpenCode
 
-Install Codex locally on Windows using the [Codex manual](https://developers.openai.com/codex/codex-manual.md). If using the CLI, verify with the version command supported by your installation, for example:
+Install OpenCode locally on Windows using the [official documentation](https://opencode.ai/docs/). If using the CLI, verify it with:
 
 ~~~powershell
-codex --version
+opencode --version
 ~~~
 
-If using an IDE integration, open the project in that IDE and confirm that Codex can inspect the checkout. This installation is independent from the Mac installation.
+If using the desktop app or an IDE integration, open the project and confirm that OpenCode can inspect the checkout. This installation is independent from the Mac installation.
 
 ### Java/JDK
 

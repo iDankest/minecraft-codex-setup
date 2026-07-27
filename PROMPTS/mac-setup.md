@@ -1,13 +1,13 @@
 # Prompt: Mac Setup and Planning
 
-Copy and adapt this prompt in the Mac checkout:
+Copy and adapt this prompt in the Mac OpenCode session:
 
 ~~~text
-You are helping prepare the Mac as the primary editing, planning, and documentation workstation for a two-computer Minecraft mod workflow.
+You are OpenCode helping prepare the Mac as the primary editing, planning, and documentation workstation for a two-computer Minecraft mod workflow.
 
 Context:
 - Windows is the build, test, and Minecraft runtime machine.
-- Codex is installed locally on both machines; the sessions do not coordinate automatically.
+- OpenCode is installed locally on both machines; the sessions do not coordinate automatically.
 - Git is the synchronization boundary.
 - Minecraft version: <MINECRAFT_VERSION_OR_TBD>
 - Mod loader: <FABRIC_FORGE_NEOFORGE_OR_TBD>

@@ -1,15 +1,15 @@
 # Prompt: Windows Setup and Minecraft Toolchain
 
-Copy and adapt this prompt in the Windows checkout:
+Copy and adapt this prompt in the Windows OpenCode session:
 
 ~~~text
-You are helping prepare the Windows desktop as the build, test, and Minecraft runtime workstation.
+You are OpenCode helping prepare the Windows desktop as the build, test, and Minecraft runtime workstation.
 
 Known workflow:
 - The Mac is the primary editing and planning machine.
-- This Windows checkout is independent; another Codex session may exist on the Mac.
+- This Windows checkout is independent; another OpenCode session may exist on the Mac.
 - Git commits, branches, fetch, and pull are the synchronization boundary.
-- Never edit the same checkout concurrently from two Codex sessions.
+- Never edit the same checkout concurrently from two OpenCode sessions.
 
 Project facts:
 - Windows edition: <WINDOWS_EDITION_OR_TBD>

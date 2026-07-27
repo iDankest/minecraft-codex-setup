@@ -1,12 +1,12 @@
 # Mac Setup
 
-The Mac is the primary workstation for editing, planning, documentation, and Codex-assisted changes. The Windows desktop is the authoritative machine for Minecraft compilation, tests, and runtime.
+The Mac is the primary workstation for editing, planning, documentation, and OpenCode-assisted changes. The Windows desktop is the authoritative machine for Minecraft compilation, tests, and runtime.
 
 ## Quick path
 
 1. Confirm the [unknown project decisions](../DECISIONS.md#next-decisions).
 2. Verify Git.
-3. Verify Codex CLI or the Codex IDE integration.
+3. Install and verify OpenCode.
 4. Keep Tailscale available, but treat it as optional for this local setup.
 5. Clone the project into a normal development folder.
 6. Create a focused branch before editing.
@@ -26,15 +26,27 @@ git config --global user.email "<YOUR_EMAIL>"
 
 Use a real email only in your local Git configuration. Never put credentials or tokens in this repository. See the [Git documentation](https://git-scm.com/doc).
 
-### Codex
+### OpenCode
 
-Install Codex locally using the [Codex manual](https://developers.openai.com/codex/codex-manual.md). If the CLI is installed, verify it with the version command supported by your installation, for example:
+Install OpenCode using the [official documentation](https://opencode.ai/docs/). The documented macOS options include the install script and Homebrew:
 
 ~~~bash
-codex --version
+curl -fsSL https://opencode.ai/install | bash
 ~~~
 
-If you use an IDE integration instead, open the Codex panel and confirm that it can read the current project. Codex on the Mac and Codex on Windows have independent context and permissions.
+~~~bash
+brew install anomalyco/tap/opencode
+~~~
+
+Verify the installation:
+
+~~~bash
+opencode --version
+~~~
+
+If you use the desktop app or an IDE integration instead, open this checkout and confirm that OpenCode can read the project. OpenCode on the Mac and OpenCode on Windows have independent context and permissions.
+
+The repository includes a project-local `opencode.json`, `AGENTS.md`, and Mac-side agent. They keep the Mac role explicit and require approval before edits or shell commands.
 
 ### Tailscale (optional)
 
@@ -52,6 +64,17 @@ javac -version
 ~~~
 
 Do not select a JDK by habit. Confirm compatibility from the project files and the chosen Minecraft loader/version first.
+
+### Verify this workspace
+
+From the root of this repository, run:
+
+~~~bash
+bash MAC/setup.sh
+opencode
+~~~
+
+The verification script does not install software, configure credentials, or run Minecraft commands. If OpenCode reports a configuration problem, run `opencode debug config` from the repository root and fix the reported project configuration before continuing.
 
 ## Clone and prepare the project
 
@@ -85,7 +108,7 @@ git status --short --branch
 git pull --ff-only origin "<CURRENT_BRANCH>"
 ~~~
 
-Then ask Codex to inspect the current project before changing files. Keep changes small, run relevant checks, and review the diff:
+Then ask OpenCode to inspect the current project before changing files. Keep changes small, run relevant checks, and review the diff:
 
 ~~~bash
 git diff --check

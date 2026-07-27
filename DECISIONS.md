@@ -8,9 +8,9 @@ This file records the workflow decisions that should remain stable and the facts
 |---|---|---|
 | Mac is the primary editing and planning machine | Confirmed | It is the main development context |
 | Windows is the build, test, and Minecraft runtime machine | Confirmed | It has more power for compilation and execution |
-| Codex is installed locally on both computers | Confirmed | Local work is preferred over depending on remote desktop |
+| OpenCode is installed locally on both computers when needed | Confirmed | Local work is preferred over depending on remote desktop |
 | Git is the synchronization boundary | Confirmed | Commits and branches provide an explicit, reviewable handoff |
-| Two Codex sessions must not edit one checkout concurrently | Confirmed | Local installations do not coordinate automatically |
+| Two OpenCode sessions must not edit one checkout concurrently | Confirmed | Local installations do not coordinate automatically |
 | Tailscale is optional for the first setup | Confirmed | The computers are together; network access is not required for Git |
 | Sunshine/Moonlight is a fallback | Confirmed | Remote desktop is a later convenience, not a setup dependency |
 | No Git initialization or publishing is part of this documentation task | Confirmed | Documentation must be created without changing repository hosting state |

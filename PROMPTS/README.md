@@ -1,10 +1,10 @@
-# Codex Prompt Library
+# OpenCode Prompt Library
 
-These prompts are reusable starting points, not permission to make unreviewed changes. Paste them into the Codex session opened in the relevant local checkout.
+These prompts are reusable starting points, not permission to make unreviewed changes. Paste them into the OpenCode session opened in the relevant local checkout.
 
 ## Shared rules for every prompt
 
-Each prompt requires Codex to:
+Each prompt requires OpenCode to:
 
 1. Inspect the current project and Git state before changing files.
 2. State assumptions and unknowns before acting.
@@ -13,7 +13,7 @@ Each prompt requires Codex to:
 5. Run relevant checks without inventing loader-specific commands.
 6. Report changed files, commands, results, and blockers.
 
-If the working tree is not clean, the requested branch is unclear, or the project facts are missing, Codex should stop and ask for clarification rather than guessing. Never ask two local Codex sessions to edit the same checkout concurrently.
+If the working tree is not clean, the requested branch is unclear, or the project facts are missing, OpenCode should stop and ask for clarification rather than guessing. Never ask two local OpenCode sessions to edit the same checkout concurrently.
 
 ## Prompt index
 
@@ -26,7 +26,7 @@ If the working tree is not clean, the requested branch is unclear, or the projec
 ## How to use a prompt
 
 - Replace placeholders such as "<CURRENT_BRANCH>" and "<MINECRAFT_PROJECT_DIRECTORY>" before pasting.
-- Give Codex one bounded task at a time.
+- Give OpenCode one bounded task at a time.
 - Review its plan before allowing file changes.
 - Review the diff and the reported checks before committing.
 - Keep installation credentials outside prompts and documentation.

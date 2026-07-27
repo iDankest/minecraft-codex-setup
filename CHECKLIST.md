@@ -17,7 +17,7 @@ Use this as the short path. Keep unknown values marked TBD; do not fill them by 
 
 - [ ] Git installed and git --version works
 - [ ] Git identity configured locally
-- [ ] Codex CLI or IDE integration installed and can inspect the checkout
+- [ ] OpenCode CLI or IDE integration installed and can inspect the checkout
 - [ ] Tailscale app confirmed installed; use remains optional
 - [ ] Project cloned into a local development folder
 - [ ] A focused branch is used for each change
@@ -26,7 +26,7 @@ Use this as the short path. Keep unknown values marked TBD; do not fill them by 
 ## Windows
 
 - [ ] Git for Windows installed and verified
-- [ ] Codex installed locally and verified
+- [ ] OpenCode installed locally and verified
 - [ ] Full JDK installed at the confirmed version
 - [ ] java -version and javac -version match the project requirement
 - [ ] This onboarding repository cloned locally
@@ -51,4 +51,4 @@ Use this as the short path. Keep unknown values marked TBD; do not fill them by 
 - [ ] Receiver fetched and pulled the intended branch
 - [ ] Receiver did not overwrite uncommitted work
 - [ ] Branch, commit, commands, and results were recorded
-- [ ] No two Codex agents edited the same checkout concurrently
+- [ ] No two OpenCode agents edited the same checkout concurrently

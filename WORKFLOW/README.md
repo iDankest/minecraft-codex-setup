@@ -6,10 +6,10 @@ Use Git as the boundary between the Mac and Windows workspaces. Each computer ha
 
 | Computer | Primary responsibility | Typical outcome |
 |---|---|---|
-| Mac | Edit, plan, review, document, coordinate Codex work | Small branch and pushed commit |
+| Mac | Edit, plan, review, document, coordinate OpenCode work | Small branch and pushed commit |
 | Windows | Compile, test, launch Minecraft, inspect runtime behavior | Validation result or focused fix commit |
 
-Both machines may run Codex locally, but the agents do not share context, locks, or awareness. **Never have both agents edit the same checkout at the same time.** Tailscale can connect machines; it does not coordinate agents or replace Git.
+Both machines may run OpenCode locally, but the agents do not share context, locks, or awareness. **Never have both agents edit the same checkout at the same time.** Tailscale can connect machines; it does not coordinate agents or replace Git.
 
 ## Daily happy path
 
@@ -22,7 +22,7 @@ git pull --ff-only origin "<DEFAULT_BRANCH>"
 git switch --create "work/mac-plan-<topic>"
 ~~~
 
-Ask Codex to inspect the current project first. Make one small change, run relevant checks, inspect the diff, and commit:
+Ask OpenCode to inspect the current project first. Make one small change, run relevant checks, inspect the diff, and commit:
 
 ~~~bash
 git diff --check
@@ -116,4 +116,4 @@ One commit should represent one reviewable work unit. Keep its relevant document
 
 ## Remote desktop fallback
 
-Sunshine/Moonlight can be added later if switching keyboards and displays becomes inconvenient. It is not needed for the first setup and should not be the synchronization mechanism. Establish local Codex installations and Git first; add remote desktop only for convenience.
+Sunshine/Moonlight can be added later if switching keyboards and displays becomes inconvenient. It is not needed for the first setup and should not be the synchronization mechanism. Establish local OpenCode installations and Git first; add remote desktop only for convenience.

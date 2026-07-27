@@ -1,9 +1,9 @@
 # Prompt: Safe Sync and Test
 
-Copy and adapt this prompt when a branch moves between machines:
+Copy and adapt this prompt in the OpenCode session when a branch moves between machines:
 
 ~~~text
-Synchronize and validate the current project safely on this computer.
+You are OpenCode. Synchronize and validate the current project safely on this computer.
 
 Context:
 - Mac edits and plans; Windows builds, tests, and runs Minecraft.
