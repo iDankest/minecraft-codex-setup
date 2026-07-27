@@ -2,15 +2,26 @@
 
 Use this as the short path. Keep unknown values marked TBD; do not fill them by guesswork.
 
-## Decisions before installation
+## Current app setup
 
-- [ ] Windows edition confirmed: [Windows edition: TBD]
+- [x] Windows app status recorded in [WINDOWS/STATUS.md](WINDOWS/STATUS.md)
+- [x] Git verified on Windows
+- [x] OpenCode verified on Windows
+- [ ] Git installed and verified on Mac
+- [ ] OpenCode installed and verified on Mac
+- [ ] This repository opened with the project-local OpenCode configuration
+- [ ] OpenCode provider authenticated on Mac, if required
+- [ ] Tailscale considered optional and not used as the Git synchronization boundary
+
+## Future Minecraft decisions
+
+- [x] Windows edition confirmed: Microsoft Windows 11 Pro
 - [ ] Minecraft version confirmed: [Minecraft version: TBD]
 - [ ] Mod loader confirmed: [Fabric / Forge / NeoForge: TBD]
 - [ ] Required JDK version confirmed: [JDK version: TBD]
-- [ ] Repository URL confirmed: [Repository URL: TBD]
-- [ ] GitHub account/owner confirmed: [GitHub account or owner: TBD]
-- [ ] Default branch confirmed: [Default branch: TBD]
+- [x] Repository URL confirmed: `git@github.com:iDankest/minecraft-codex-setup.git`
+- [x] GitHub account/owner confirmed: `iDankest`
+- [x] Default branch confirmed: `main`
 - [ ] Project build, test, and runtime commands found in project documentation
 
 ## Mac

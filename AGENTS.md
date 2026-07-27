@@ -22,10 +22,11 @@ This repository is the onboarding and handoff workspace for a two-computer Minec
 ## Mac-side workflow
 
 1. Read `DECISIONS.md` and `MAC/README.md`.
-2. Inspect the target checkout and report any uncommitted changes.
-3. Confirm the project facts before proposing Minecraft-specific commands.
-4. Make only the smallest approved change.
-5. Run documented checks that are appropriate for Mac.
-6. Run `git diff --check`, review the diff, and report the exact handoff branch and commit.
+2. Read `WINDOWS/STATUS.md` for the latest committed Windows handoff snapshot.
+3. Inspect the target checkout and report any uncommitted changes.
+4. Confirm the project facts before proposing Minecraft-specific commands.
+5. Make only the smallest approved change.
+6. Run documented checks that are appropriate for Mac.
+7. Run `git diff --check`, review the diff, and report the exact handoff branch and commit.
 
 Use `WINDOWS/README.md` and `PROMPTS/windows-setup.md` for Windows validation. Do not silently move Windows-only work onto the Mac.

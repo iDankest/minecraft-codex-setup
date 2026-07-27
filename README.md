@@ -7,6 +7,8 @@ This repository documents a safe, local-first workflow for developing Minecraft 
 - **Git:** synchronization boundary between independent local checkouts.
 - **OpenCode:** installed locally on both computers when both machines need an agent.
 
+The current phase is app and workspace setup: install Git and OpenCode on the Mac, use Tailscale only if needed, and leave Java and the Minecraft project for a later phase.
+
 ## Recommended workflow
 
 1. Plan and edit on the Mac.
@@ -19,14 +21,16 @@ Two local OpenCode installations **do not coordinate automatically**. Never let 
 
 Tailscale is optional when both computers are next to each other. Remote desktop through Sunshine/Moonlight is a fallback, not a requirement for the first setup.
 
-## Quick path
+## Current app setup path
 
-1. Fill in the [next decisions](DECISIONS.md#next-decisions).
+1. Read the [Windows handoff snapshot](WINDOWS/STATUS.md).
 2. Follow [Mac setup](MAC/README.md).
-3. Clone this repository and the Minecraft project on Windows using [Windows setup](WINDOWS/README.md).
-4. Use the [safe synchronization workflow](WORKFLOW/README.md).
-5. Run the [first Windows validation sequence](WINDOWS/README.md#first-windows-validation-sequence).
-6. Use the reusable [OpenCode prompts](PROMPTS/README.md).
+3. Install Git and OpenCode on the Mac.
+4. Run `bash MAC/setup.sh` from this repository.
+5. Start OpenCode and use the project-local configuration.
+6. Keep Minecraft setup and Windows validation for a later phase.
+
+For the later two-computer development workflow, use the [safe synchronization workflow](WORKFLOW/README.md), [Windows setup](WINDOWS/README.md), and reusable [OpenCode prompts](PROMPTS/README.md).
 
 ## Current project facts
 
@@ -34,13 +38,13 @@ Keep unknown values as placeholders until confirmed. Do not guess them in comman
 
 | Fact | Value |
 |---|---|
-| Windows edition | [Windows edition: TBD] |
+| Windows edition | Microsoft Windows 11 Pro |
 | Minecraft version | [Minecraft version: TBD] |
 | Mod loader | [Fabric / Forge / NeoForge: TBD] |
 | Java/JDK version | [JDK version: TBD] |
-| Repository URL | [Repository URL: TBD] |
-| GitHub account/owner | [GitHub account or owner: TBD] |
-| Default branch | [Default branch: TBD] |
+| Repository URL | `git@github.com:iDankest/minecraft-codex-setup.git` |
+| GitHub account/owner | `iDankest` |
+| Default branch | `main` |
 
 ## Repository map
 
@@ -48,6 +52,7 @@ Keep unknown values as placeholders until confirmed. Do not guess them in comman
 |---|---|
 | [MAC/README.md](MAC/README.md) | Mac installation and planning workstation |
 | [WINDOWS/README.md](WINDOWS/README.md) | Windows installation and Minecraft validation |
+| [WINDOWS/STATUS.md](WINDOWS/STATUS.md) | Latest committed Windows workstation handoff snapshot |
 | [WORKFLOW/README.md](WORKFLOW/README.md) | Daily roles, Git synchronization, and recovery rules |
 | [PROMPTS/README.md](PROMPTS/README.md) | OpenCode prompt library and usage rules |
 | [PROMPTS/mac-setup.md](PROMPTS/mac-setup.md) | Mac setup prompt for OpenCode |

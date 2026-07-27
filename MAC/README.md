@@ -1,16 +1,16 @@
 # Mac Setup
 
-The Mac is the primary workstation for editing, planning, documentation, and OpenCode-assisted changes. The Windows desktop is the authoritative machine for Minecraft compilation, tests, and runtime.
+The Mac is the primary workstation for editing, planning, documentation, and OpenCode-assisted changes. The current task is only to prepare this workspace and its apps; Minecraft project setup is deferred.
 
 ## Quick path
 
-1. Confirm the [unknown project decisions](../DECISIONS.md#next-decisions).
-2. Verify Git.
+1. Read the [Windows handoff snapshot](../WINDOWS/STATUS.md).
+2. Install and verify Git.
 3. Install and verify OpenCode.
-4. Keep Tailscale available, but treat it as optional for this local setup.
-5. Clone the project into a normal development folder.
-6. Create a focused branch before editing.
-7. Push small commits for Windows to consume.
+4. Clone this onboarding repository into a normal development folder.
+5. Run the workspace verification script.
+6. Keep Tailscale optional; Git is the synchronization boundary.
+7. Leave Java and Minecraft setup deferred.
 
 ## Installation and verification
 
@@ -50,11 +50,11 @@ The repository includes a project-local `opencode.json`, `AGENTS.md`, and Mac-si
 
 ### Tailscale (optional)
 
-Tailscale is already installed on the Mac. For this first setup, do not make it a dependency: the computers are together and Git is the synchronization boundary. If you later need network access, sign in to the Tailscale app and follow [Connect to devices](https://tailscale.com/kb/1452/connect-to-devices). Install it on Windows only if a specific network use case requires it.
+The repository records Tailscale as optional for this first setup. If the app is already installed on the Mac, leave it available but do not make it a dependency: Git is the synchronization boundary. If you later need network access, sign in to the Tailscale app and follow [Connect to devices](https://tailscale.com/kb/1452/connect-to-devices).
 
-### Java/JDK
+### Java/JDK (deferred)
 
-The Mac does not need to run the Minecraft build in the recommended workflow. Install a JDK here only if the project will also be built or tested locally. The required version is still unknown: [JDK version: TBD].
+Java is not required for the current app-only setup. Do not install a JDK by habit. Install one only after a real project documents the required version and Mac-side checks.
 
 Verify an installed JDK with:
 
@@ -62,8 +62,6 @@ Verify an installed JDK with:
 java -version
 javac -version
 ~~~
-
-Do not select a JDK by habit. Confirm compatibility from the project files and the chosen Minecraft loader/version first.
 
 ### Verify this workspace
 
@@ -76,25 +74,29 @@ opencode
 
 The verification script does not install software, configure credentials, or run Minecraft commands. If OpenCode reports a configuration problem, run `opencode debug config` from the repository root and fix the reported project configuration before continuing.
 
-## Clone and prepare the project
+## Clone and open this workspace
 
-Replace placeholders before running commands:
+Clone this onboarding repository on the Mac:
 
 ~~~bash
 mkdir -p "$HOME/Code"
 cd "$HOME/Code"
-git clone "<REPOSITORY_URL>" "<PROJECT_DIRECTORY>"
-cd "<PROJECT_DIRECTORY>"
+git clone "git@github.com:iDankest/minecraft-codex-setup.git" "minecraft-codex-setup"
+cd "minecraft-codex-setup"
 git status --short --branch
-git switch --create "work/mac-plan-<topic>"
+bash MAC/setup.sh
+opencode
 ~~~
 
-If the project is already cloned, do not clone over it. Inspect it first:
+If this repository is already cloned, do not clone over it. Update and inspect it first:
 
 ~~~bash
-cd "<PROJECT_DIRECTORY>"
+cd "$HOME/Code/minecraft-codex-setup"
+git pull --ff-only origin main
 git status --short --branch
 git remote -v
+bash MAC/setup.sh
+opencode
 ~~~
 
 Do not paste a token into a remote URL. Use the GitHub authentication method approved for the account, and keep its credentials in the credential manager or agent rather than in documentation.
@@ -108,7 +110,7 @@ git status --short --branch
 git pull --ff-only origin "<CURRENT_BRANCH>"
 ~~~
 
-Then ask OpenCode to inspect the current project before changing files. Keep changes small, run relevant checks, and review the diff:
+Then ask OpenCode to inspect this workspace before changing files. Keep changes small, run relevant checks, and review the diff:
 
 ~~~bash
 git diff --check
@@ -130,4 +132,4 @@ Push only after checking the branch and commit:
 git push -u origin "<CURRENT_BRANCH>"
 ~~~
 
-For the complete handoff rules, read [WORKFLOW/README.md](../WORKFLOW/README.md).
+For the later Minecraft project handoff rules, read [WORKFLOW/README.md](../WORKFLOW/README.md). Do not start that project workflow until its repository and project facts are available.

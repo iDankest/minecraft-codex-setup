@@ -2,6 +2,8 @@
 
 This file records the workflow decisions that should remain stable and the facts that must be confirmed before Minecraft-specific installation is finalized.
 
+The current phase is only app and workspace setup. The Minecraft project, Java version, loader, and build commands are intentionally out of scope until that project is provided.
+
 ## Confirmed decisions
 
 | Decision | Status | Rationale |
@@ -19,13 +21,13 @@ This file records the workflow decisions that should remain stable and the facts
 
 | Fact | Current value | Needed before |
 |---|---|---|
-| Windows edition | [Windows edition: TBD] | Windows-specific installation choices |
+| Windows edition | Microsoft Windows 11 Pro | Windows-specific installation choices |
 | Minecraft version | [Minecraft version: TBD] | Loader and toolchain selection |
 | Mod loader | [Fabric / Forge / NeoForge: TBD] | Loader-specific tooling and commands |
 | Java/JDK version | [JDK version: TBD] | Build and runtime compatibility |
-| Repository URL | [Repository URL: TBD] | Clone and remote configuration |
-| GitHub account/owner | [GitHub account or owner: TBD] | Access and repository ownership |
-| Default branch | [Default branch: TBD] | Safe pull and branch commands |
+| Repository URL | `git@github.com:iDankest/minecraft-codex-setup.git` | Clone and remote configuration |
+| GitHub account/owner | `iDankest` | Access and repository ownership |
+| Default branch | `main` | Safe pull and branch commands |
 | Minecraft project directory | [Minecraft project directory: TBD] | Windows checkout location |
 | Build/test/runtime commands | [Project documentation: TBD] | First validation sequence |
 
