@@ -2,7 +2,7 @@
 
 The Windows desktop is the build, test, and Minecraft runtime machine. This guide is intentionally loader-neutral: the exact Minecraft version, loader, JDK, and build command must come from the project and be confirmed before installation is finalized.
 
-For the current app-only setup, use `WINDOWS/STATUS.md` and `MAC/README.md`. The Minecraft-specific sections below are for a later phase.
+For the current app-only setup, use `WINDOWS/STATUS.md` and `MAC/README.md`. For the selected Mac-to-Windows remote streaming setup, use [REMOTE-STREAMING.md](REMOTE-STREAMING.md). The Minecraft-specific sections below are for a later phase.
 
 ## Quick path
 

@@ -53,6 +53,7 @@ Keep unknown values as placeholders until confirmed. Do not guess them in comman
 | [MAC/README.md](MAC/README.md) | Mac installation and planning workstation |
 | [WINDOWS/README.md](WINDOWS/README.md) | Windows installation and Minecraft validation |
 | [WINDOWS/STATUS.md](WINDOWS/STATUS.md) | Latest committed Windows workstation handoff snapshot |
+| [WINDOWS/REMOTE-STREAMING.md](WINDOWS/REMOTE-STREAMING.md) | Mac-to-Windows Tailscale, Sunshine, and Moonlight setup |
 | [WORKFLOW/README.md](WORKFLOW/README.md) | Daily roles, Git synchronization, and recovery rules |
 | [PROMPTS/README.md](PROMPTS/README.md) | OpenCode prompt library and usage rules |
 | [PROMPTS/mac-setup.md](PROMPTS/mac-setup.md) | Mac setup prompt for OpenCode |
