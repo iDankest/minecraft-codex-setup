@@ -45,6 +45,14 @@ Use this as the short path. Keep unknown values marked TBD; do not fill them by 
 - [ ] Loader-specific tooling installed only after the loader/version decision
 - [ ] Project README and build files inspected before commands run
 
+## Remote streaming
+
+- [x] Tailscale installed on Windows
+- [ ] Tailscale authenticated on Windows and connected to the Mac tailnet
+- [x] Sunshine installed and running on Windows
+- [ ] Sunshine account and pairing PIN configured
+- [ ] Moonlight installed on the Mac and paired with Windows
+
 ## First validation
 
 - [x] Windows checkout is clean

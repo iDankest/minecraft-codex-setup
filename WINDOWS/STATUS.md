@@ -21,14 +21,14 @@ This is a safe snapshot of the Windows workstation and the latest Mac setup resu
 - Default branch: `main`
 - Synchronization: `git pull --ff-only origin main` — already up to date
 
-## Windows remote access (same LAN)
+## Windows remote streaming (Tailscale + Sunshine + Moonlight)
 
-- Method: Windows Remote Desktop (RDP)
-- Network profile: `Private`
-- Remote Desktop: enabled
-- Firewall: inbound TCP/UDP rules enabled only for the private profile
-- Remote Desktop service: running; local listener verified on port `3389`
-- Tailscale: not required for this local-network connection
+- Method: Tailscale network + Sunshine on Windows + Moonlight on Mac
+- RDP: disabled; not part of the selected setup
+- Tailscale on Windows: `1.98.9` installed and running; login pending
+- Sunshine: installed and running; web UI reachable at `https://localhost:47990`; first-run account/PIN pending
+- Moonlight: Mac client installation and pairing pending
+- Router port forwarding: none
 
 ## Mac setup verified
 
@@ -46,7 +46,8 @@ No Minecraft repository is needed to complete the current app and workspace setu
 
 ## Next safe actions
 
-1. On the Mac, install the official Windows App and connect to the Windows PC name `DANKEST-PC` with the Windows account credentials.
-2. Keep this onboarding checkout clean on `main`; Git remains the synchronization boundary.
-3. Keep Minecraft version, loader, JDK requirement, and build commands as `TBD` until a real project is selected and its facts are confirmed.
-4. Run compilation, tests, and Minecraft runtime work on Windows only after that project is available.
+1. Sign in to Tailscale on Windows with the same account/tailnet used on the Mac, then finish the Sunshine account/PIN at `https://localhost:47990`.
+2. On the Mac, install Moonlight, add the Windows Tailscale device, and complete PIN pairing.
+3. Keep this onboarding checkout clean on `main`; Git remains the synchronization boundary.
+4. Keep Minecraft version, loader, JDK requirement, and build commands as `TBD` until a real project is selected and its facts are confirmed.
+5. Run compilation, tests, and Minecraft runtime work on Windows only after that project is available.
