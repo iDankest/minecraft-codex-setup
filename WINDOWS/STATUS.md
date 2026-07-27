@@ -21,6 +21,15 @@ This is a safe snapshot of the Windows workstation and the latest Mac setup resu
 - Default branch: `main`
 - Synchronization: `git pull --ff-only origin main` — already up to date
 
+## Windows remote access (same LAN)
+
+- Method: Windows Remote Desktop (RDP)
+- Network profile: `Private`
+- Remote Desktop: enabled
+- Firewall: inbound TCP/UDP rules enabled only for the private profile
+- Remote Desktop service: running; local listener verified on port `3389`
+- Tailscale: not required for this local-network connection
+
 ## Mac setup verified
 
 - Date: 2026-07-27
@@ -37,6 +46,7 @@ No Minecraft repository is needed to complete the current app and workspace setu
 
 ## Next safe actions
 
-1. Keep this onboarding checkout clean on `main`; Git remains the synchronization boundary.
-2. Keep Minecraft version, loader, JDK requirement, and build commands as `TBD` until a real project is selected and its facts are confirmed.
-3. Run compilation, tests, and Minecraft runtime work on Windows only after that project is available.
+1. On the Mac, install the official Windows App and connect to the Windows PC name `DANKEST-PC` with the Windows account credentials.
+2. Keep this onboarding checkout clean on `main`; Git remains the synchronization boundary.
+3. Keep Minecraft version, loader, JDK requirement, and build commands as `TBD` until a real project is selected and its facts are confirmed.
+4. Run compilation, tests, and Minecraft runtime work on Windows only after that project is available.
