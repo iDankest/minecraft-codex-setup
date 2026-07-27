@@ -1,8 +1,8 @@
 # Windows Handoff Status
 
-This is a safe snapshot of the Windows workstation for the Mac-side OpenCode session. The current scope is app and workspace setup, not Minecraft project setup. It is not live machine telemetry; update it after installing tools or changing the active branch.
+This is a safe snapshot of the Windows workstation and the latest Mac setup result for the two-computer workflow. Mac owns editing, planning, documentation, and OpenCode; Windows owns compilation, tests, and Minecraft runtime work. Git remains the synchronization boundary. Update this file after installing tools or changing the active branch.
 
-## Last verified
+## Windows status last verified
 
 - Date: 2026-07-27
 - Windows edition: Microsoft Windows 11 Pro
@@ -12,7 +12,7 @@ This is a safe snapshot of the Windows workstation for the Mac-side OpenCode ses
 - Tailscale CLI: not found; Tailscale is optional for this workflow
 - Java/Javac: not required for the current app-only setup
 
-## Onboarding checkout at last verification
+## Onboarding checkout at last Windows verification
 
 - Repository: `git@github.com:iDankest/minecraft-codex-setup.git`
 - Branch: `main`
@@ -20,21 +20,23 @@ This is a safe snapshot of the Windows workstation for the Mac-side OpenCode ses
 - Working tree: clean
 - Default branch: `main`
 
-## Mac setup target
+## Mac setup verified
 
-The Mac should be prepared with these tools:
+- Date: 2026-07-27
+- Architecture: `arm64`
+- Git: `2.50.1`
+- OpenCode CLI: `1.18.7`
+- Git identity: configured
+- OpenCode project files: present (`opencode.json`, `AGENTS.md`, `.opencode/agents/mac-workspace.md`)
+- Java: installed; required JDK version remains `TBD`
+- Setup verification: passed
+- Working tree: clean
 
-- Git: required for cloning and synchronization
-- OpenCode: required for the local coding-agent session
-- Tailscale: optional; Git remains the synchronization boundary
-- Java/JDK: deferred until a real project requires Mac-side checks
+No Minecraft repository is needed to complete the current app and workspace setup phase.
 
-The repository already contains the Mac OpenCode configuration in `opencode.json`, `AGENTS.md`, and `.opencode/agents/mac-workspace.md`. No Minecraft repository is needed to complete this phase.
+## Next safe actions
 
-## Next Mac actions
-
-1. Clone or pull this onboarding repository on the Mac.
-2. Install Git and OpenCode using `MAC/README.md`.
-3. Run `bash MAC/setup.sh` from the repository root.
-4. Start `opencode` and authenticate with the provider using OpenCode's `/connect` flow if needed.
-5. Do not install Java or clone a Minecraft project yet.
+1. Pull this handoff into the Windows checkout after the Mac commit is pushed.
+2. Start `opencode` in the Mac checkout; authenticate with `/connect` if needed.
+3. Keep Minecraft version, loader, JDK requirement, and build commands as `TBD` until a real project is selected and its facts are confirmed.
+4. Run compilation, tests, and Minecraft runtime work on Windows only after that project is available.
