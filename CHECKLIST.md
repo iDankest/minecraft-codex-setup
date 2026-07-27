@@ -36,20 +36,20 @@ Use this as the short path. Keep unknown values marked TBD; do not fill them by 
 
 ## Windows
 
-- [ ] Git for Windows installed and verified
-- [ ] OpenCode installed locally and verified
+- [x] Git for Windows installed and verified
+- [x] OpenCode installed locally and verified (optional for this Codex-led session)
 - [ ] Full JDK installed at the confirmed version
 - [ ] java -version and javac -version match the project requirement
-- [ ] This onboarding repository cloned locally
+- [x] This onboarding repository cloned locally
 - [ ] Minecraft project cloned into a separate local directory
 - [ ] Loader-specific tooling installed only after the loader/version decision
 - [ ] Project README and build files inspected before commands run
 
 ## First validation
 
-- [ ] Windows checkout is clean
-- [ ] Intended branch and commit are confirmed
-- [ ] git pull --ff-only succeeds
+- [x] Windows checkout is clean
+- [x] Intended branch and commit are confirmed
+- [x] git pull --ff-only succeeds
 - [ ] Project-documented build/check succeeds, or the first meaningful error is recorded
 - [ ] Project-documented Minecraft runtime starts, or the first meaningful error is recorded
 - [ ] Results are reported without secrets or private paths
